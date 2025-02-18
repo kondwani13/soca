@@ -1,0 +1,1614 @@
+<!DOCTYPE html>
+ <html lang="zxx">
+
+
+<head>
+
+    	<!-- Metas -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="HTML5 Template Coco onepage themeforest" />
+		<meta name="description" content="Coco - Onepage Multi-Purpose HTML5 Template" />
+		<meta name="author" content="" />
+
+		<!-- Title  -->
+		<title>Society 260</title>
+
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="img/favicon.ico" />
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
+
+		<!-- Plugins -->
+		<link rel="stylesheet" href="css/plugins.css" />
+
+        <!-- Core Style Css -->
+        <link rel="stylesheet" href="css/style.css" />
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+    font-family: Poppins;
+    font-size: 12px;
+}
+a{
+    text-decoration: none;
+}
+header{
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+header a{
+    color: #eee;
+    margin-right: 40px;
+}
+/* carousel */
+.carousel{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic{
+    color: #f1683a;
+}
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .item .buttons button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+.carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+/* thumbail */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .description{
+    font-weight: 300;
+}
+/* arrows */
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+/* running time */
+
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+}
+/* FAQ Section Styling */
+.faq-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.faq-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* FAQ Container */
+.faq-container {
+    max-height: 500px; /* Limit height to show only 3 questions initially */
+    overflow-y: scroll; /* Enable scrolling */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+/* FAQ Question Styling */
+.faq-question {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #007BFF;
+    cursor: pointer;
+    margin: 10px 0;
+    text-align: left;
+}
+
+/* FAQ Answer Styling */
+.faq-answer {
+    font-size: 1.2em;
+    color: #555;
+    display: none; /* Hide answers by default */
+    padding-left: 10px;
+}
+
+/* Show answer when question is clicked */
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Add scrollbar styles */
+.faq-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.faq-container::-webkit-scrollbar-thumb {
+    background: #007BFF;
+    border-radius: 4px;
+}
+
+.faq-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.marquee {
+        width: 100%;
+        padding: 90px 20px;
+        border-top: 1px solid #009999;
+        border-bottom: 1px solid #009999;
+
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .marquee h3 {
+        font-size: 94px;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+
+      .marquee .marquee-wrapper {
+        width: 100000px;
+        animation: marqueeAnimation 38s linear 0s infinite running;
+      }
+
+      .marquee h3 .marquee-title {
+        margin-right: 20px;
+        float: left;
+      }
+
+      .text-stroke-black {
+        color: transparent;
+        -webkit-text-stroke: 1px;
+        -webkit-text-stroke-color: #009999;
+      }
+
+      @keyframes marqueeAnimation {
+        100% {
+          transform: translateX(-4600px);
+        }
+      }
+
+      @media (max-width: 992px) {
+        .marquee h3 {
+          font-size: 60px;
+        }
+      }
+
+      @media (max-width: 549px) {
+        .marquee h3 {
+          font-size: 50px;
+        }
+      }
+      @keyframes move {
+  0% {
+    transform: translate(0,0);
+  }
+  50% {
+    transform: translate(40vw,10vw);
+    background-color: yellow;
+  }
+  100% {
+    transform: translate(80vw,0);
+    background-color: green;
+  }
+}
+* {
+  margin: 0; padding: 0;
+}
+.circle {
+  width: 20vw;
+  height: 20vw;
+  background-color: red;
+  border-radius: 50%;
+  animation-name: move;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.circle:hover {
+  animation-play-state: paused;
+}
+.box {
+  width: 100vw;
+  height: auto;
+}
+.marquee{
+
+position:relative;
+animation:scroll 15s linear infinite;
+padding:3px;
+}
+/* @import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
+
+
+h1 {
+  color: hsla(0, 0%, 0%, .9);
+  font: normal 36px Varela Round, sans-serif;
+  height: auto;
+  left: 0;
+  letter-spacing: 5px;
+  margin: -80px 0 0 0;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: 50%;
+  width: 100%;
+  animation: move linear 2000ms infinite;  
+}
+
+@keyframes move {
+  0% {
+    text-shadow:
+      4px -4px 0 hsla(0, 100%, 50%, 1), 
+      3px -3px 0 hsla(0, 100%, 50%, 1), 
+      2px -2px 0 hsla(0, 100%, 50%, 1), 
+      1px -1px 0 hsla(0, 100%, 50%, 1),
+      -4px 4px 0 hsla(180, 100%, 50%, 1), 
+      -3px 3px 0 hsla(180, 100%, 50%, 1), 
+      -2px 2px 0 hsla(180, 100%, 50%, 1), 
+      -1px 1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }
+  25% {    
+    text-shadow:      
+      -4px -4px 0 hsla(180, 100%, 50%, 1), 
+      -3px -3px 0 hsla(180, 100%, 50%, 1), 
+      -2px -2px 0 hsla(180, 100%, 50%, 1), 
+      -1px -1px 0 hsla(180, 100%, 50%, 1),
+      4px 4px 0 hsla(0, 100%, 50%, 1), 
+      3px 3px 0 hsla(0, 100%, 50%, 1), 
+      2px 2px 0 hsla(0, 100%, 50%, 1), 
+      1px 1px 0 hsla(0, 100%, 50%, 1)      
+    ;
+  }
+  50% {
+    text-shadow:
+      -4px 4px 0 hsla(0, 100%, 50%, 1), 
+      -3px 3px 0 hsla(0, 100%, 50%, 1), 
+      -2px 2px 0 hsla(0, 100%, 50%, 1), 
+      -1px 1px 0 hsla(0, 100%, 50%, 1),
+      4px -4px 0 hsla(180, 100%, 50%, 1), 
+      3px -3px 0 hsla(180, 100%, 50%, 1), 
+      2px -2px 0 hsla(180, 100%, 50%, 1), 
+      1px -1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }
+  75% {
+    text-shadow:
+      4px 4px 0 hsla(180, 100%, 50%, 1), 
+      3px 3px 0 hsla(180, 100%, 50%, 1), 
+      2px 2px 0 hsla(180, 100%, 50%, 1), 
+      1px 1px 0 hsla(180, 100%, 50%, 1),
+      -4px -4px 0 hsla(0, 100%, 50%, 1), 
+      -3px -3px 0 hsla(0, 100%, 50%, 1), 
+      -2px -2px 0 hsla(0, 100%, 50%, 1), 
+      -1px -1px 0 hsla(0, 100%, 50%, 1)      
+    ;
+  }
+  100% {
+    text-shadow:
+      4px -4px 0 hsla(0, 100%, 50%, 1), 
+      3px -3px 0 hsla(0, 100%, 50%, 1), 
+      2px -2px 0 hsla(0, 100%, 50%, 1), 
+      1px -1px 0 hsla(0, 100%, 50%, 1),
+      -4px 4px 0 hsla(180, 100%, 50%, 1), 
+      -3px 3px 0 hsla(180, 100%, 50%, 1), 
+      -2px 2px 0 hsla(180, 100%, 50%, 1), 
+      -1px 1px 0 hsla(180, 100%, 50%, 1)
+    ;
+  }  
+} */
+
+        </style>
+
+    </head>
+
+    <body>
+
+    	<!-- =====================================
+    	==== Start Loading -->
+
+    	<div class="loading">
+    		<div class="text-center middle">
+    			<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    		</div>
+    	</div>
+
+    	<!-- End Loading ====
+    	======================================= -->
+
+
+    	<!-- =====================================
+    	==== Start Navbar -->
+
+		<nav class="navbar navbar-expand-lg">
+			<div class="container">
+
+            <!-- Logo -->
+            <a class="logo" href="#">
+                <img src="img/logo-light.png" alt="logo">
+            </a>
+
+			  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="icon-bar"><i class="fas fa-bars"></i></span>
+			  </button>
+
+			  <!-- navbar links -->
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			    <ul class="navbar-nav ml-auto">
+			      <li class="nav-item">
+			        <a class="nav-link active" href="#" data-scroll-nav="0">Home</a>
+			      </li>
+			      <li class="nav-item">
+                    <a class="nav-link" href="/club.html" >Club260</a>
+                  </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#" data-scroll-nav="1">About</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#" data-scroll-nav="5">Calendar</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#" data-scroll-nav="6">Contact</a>
+			      </li>
+			    </ul>
+			  </div>
+			</div>
+		</nav>
+
+    	<!-- End Navbar ====
+    	======================================= -->
+
+        <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="img/img1.jpg">
+                <div class="content">
+                    <div class="author">Segment_</div>
+                    <div class="title">Club<span style="color: #009999;">260</span></div>
+                    <div class="topic">Welcome</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        Club260 is a monthly virtual gathering by Society260 designed as a safe space for reflection, growth and the sharing of collective wisdom held on the last Sunday of the every month. This event offers members a chance to connect with their S260 family. Featuring special guests like healers and life coaches, club260 focuses on promoting mental well-bing.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/img2.jpg">
+                <div class="content">
+                    <div class="author">Segment_</div>
+                    <div class="title">Who We Are</div>
+                    <div class="topic">About</div>
+                    <div class="des">
+                        Society 260 stands as an independent communicative initiative driven by a resolute commitment to instigate actionable awareness surrounding mental health, We create inclusive, safe spaces for authentic self-expression and mutual respect, We offer charity programs, art therapy, and workshops for self-discovery and resilience.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/img3.jpg">
+                <div class="content">
+                    <div class="author">Segment_</div>
+                    <div class="title">Style & Design</div>
+                    <div class="topic">Fashion</div>
+                    <div class="des">
+                        Society 260 uses fashion as a language of self expression, as a safe space we provides a world where people can show up as their true authentic selves, the S260 universe is liminal, it is endless like the walls of the soul. In this world you can be limitless, you can be brave. your power is in your uniqueness, your power is in your youness.
+
+
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/img4.jpg">
+                <div class="content">
+                    <div class="author">Segment_</div>
+                    <div class="title">Events & Programs </div>
+                    <div class="topic">Calendar</div>
+                    <div class="des">
+                        Society 260 hosts a dynamic range of events and programs throughout the year, each designed to inspire, engage, and create meaningful impact. Our calendar includes diverse event types, reflecting our commitment to holistic well-being and creative expression. To foster community and inclusivity, we host pop-up events that encourage meaningful connections.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <button>SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="img/img1.jpg">
+                <div class="content">
+                    <div class="title">
+                        <img src="img/club.png">
+                    </div>
+                    <div class="description">
+                        Club260 is a monthly virtual gathering by Society260.
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/img2.jpg">
+                <div class="content">
+                    <div class="title">
+                        About us
+                    </div>
+                    <div class="description">
+                        Society 260 is an independent initiative to raise awareness for mental health.
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/img3.jpg">
+                <div class="content">
+                    <div class="title">
+                        Fashion
+                    </div>
+                    <div class="description">
+                        Society260 uses fashion as a language of self expression
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/img4.jpg">
+                <div class="content">
+                    <div class="title">
+                        Calendar
+                    </div>
+                    <div class="description">
+                        Our Calendar is packed with different types of periodic events.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+
+    	<!-- =====================================
+    	==== Start Header -->
+
+    	<!--<header class="header valign bg-img" data-scroll-index="0" data-overlay-dark="7" data-background="img/bg4.jpg" data-stellar-background-ratio="0.5">
+
+    		<div class="container">
+    			<div class="text-center caption mt-30">
+                    <h4>We Are</h4>
+                    <h1>Big Digital Agency</h1>
+                    <div class="row">
+                        <div class="offset-md-1 col-md-10 offset-lg-2 col-lg-8">
+                            <p>We are a passionate digital design agency that specializes in beautiful and easy-to-use digital design & web development services.</p>
+                        </div>
+                    </div>
+                    <a href="#0" class="butn butn-light mt-30">
+                        <span>Get Started</span>
+                    </a>
+                </div>
+    		</div>
+    	</header> -->
+
+    	<!-- End Header ====
+    	======================================= -->
+
+
+
+        <!-- =====================================
+        ==== Start Hero -->
+        <div class="marquee">
+            <h3>
+              <div class="marquee-wrapper">
+                <div class="marquee-title">
+                  / A safe <span class="text-stroke-black">space</span>
+                   in motion
+                  <span class="text-stroke-black"></span> / A safe
+                  <span class="text-stroke-black">space</span>
+                   in motion
+                  <span class="text-stroke-black"></span>
+                </div>
+                <div class="marquee-title">
+                  / A safe <span class="text-stroke-black">space</span>
+                   in motion
+                  <span class="text-stroke-black"></span> / A safe
+                  <span class="text-stroke-black">space</span>
+                   in motion
+                  <span class="text-stroke-black"></span>
+                </div>
+              </div>
+            </h3>
+          </div>
+        <!-- the ball -->
+        <div class="box">
+            <!-- <div class="circle"></div> -->
+          </div>
+         <!-- the ball end-->
+        <section class="hero" data-scroll-index="1">
+            <div class="section-padding">
+                <div class="container">
+                    <div class="circle"></div>
+                    <div class="row">
+                        <div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10 text-center mb-80">
+                            <h4 class="extra-title">About Our <span>Creative safe</span> space</h4>
+                            <p>Society 260 is an embodiment of individualism and self expression, a platform for those that think with their hearts and an open mic for those with different point of views that might seem contrary to popular opinion.</p>
+                        </div>
+                        <!-- scroll effect-->
+                         
+                        <!-- scroll effect-->
+                         <maquee>
+                            <div class="feat-item mb-md50 col-lg-4">
+                                <div class="text-center">
+                                    <span class="icon"><img src="img/brain.png" ></span>
+                                    <h5>Mind</h5>
+                                    <h6>Mental health</h6>
+                                    <p>Dedicated to raising mental health awareness and providing safe spaces</p>
+                                </div>
+                            </div>
+    
+                            <div class="feat-item active mb-md50 col-lg-4">
+                                <div class="text-center">
+                                    <span class="icon "><img src="img/mental-health.png" ></span>
+                                    <h5>Heart&Mind</h5>
+                                    <h6>Emotional intelligence</h6>
+                                    <p>We emphasize on the importance of emotional intelligence as a cornerstone for personal growth.</p>
+                                </div>
+                            </div>
+    
+                            <div class="feat-item col-lg-4">
+                                <div class="text-center">
+                                    <span class="icon"><img src="img/heart.png" ></span>
+                                    <h5>Heart</h5>
+                                    <h6>Love and affection</h6>
+                                    <p>Fostering meaningful connections and cultivating a sense of belonging within our community</p>
+                                </div>
+                            </div>
+        
+                         </maquee>
+            
+                           
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tabs-section section-padding bg-gray">
+                <div class="container">
+                    <div class="row">
+
+                        <ul class="col-md-12 nav nav-pills tabs" id="pills-tab" role="tablist">
+                            <li class="nav-item one active">
+                                <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">About Us</a>
+                            </li>
+                            <li class="nav-item two">
+                                <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Our Mission</a>
+                            </li>
+                            <li class="nav-item three">
+                                <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Our Vison</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content col-lg-12" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="row">
+                                    <div class="left col-lg-6">
+                                        <div class="about box-white">
+                                            <h1 class="title">About Us</h1>
+                                            <!-- <h6 class="sub-title">We Are A Creative Agency</h6> -->
+                                            <p>Society 260 stands as an independent communicative initiative driven by a resolute commitment to instiĀate actionable awareness surroundinĀ mental health. At our careÿully curated saÿe spaces, we not
+                                                only encouraĀe individuals to show up authentically but also ÿoster an inclusive environment where diverse experiences are respected. Beyond panel discussions, art
+                                                therapy, and writinĀ workshops, we offer a ranĀe oÿ charity-based proĀrams desiĀned to empower individuals on transÿormative journeys oÿ selÿ-discovery and resilience,
+                                                creatinĀ a dynamic space ÿor collective Ārowth.</p>
+
+                                            <!-- Skills -->
+
+                                            <!-- <div class="skills mt-40">
+                                                <div class="skill-item mb-30">
+                                                    <h6>Web Design</h6>
+                                                    <div class="skill-progress">
+                                                        <div class="progres" data-value="90%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="skill-item mb-30">
+                                                    <h6>Branding</h6>
+                                                    <div class="skill-progress">
+                                                        <div class="progres" data-value="75%"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="skill-item">
+                                                    <h6>Development</h6>
+                                                    <div class="skill-progress">
+                                                        <div class="progres" data-value="80%"></div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 image">
+                                        <div class="img">
+                                            <img src="img/f2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="row">
+                                    <div class="left col-lg-6">
+                                        <div class="mission box-white">
+                                            <h5 class="title">Our Mission</h5>
+                                            <!-- <h6 class="sub-title">We Are A Creative Agency</h6> -->
+                                            <p class="mb-10"><b>THE MISSION OF SOCIETY 260</b>
+                                                OF SOCIETY 260 IS TO BRING ACTIONABLE AWARENESS TO MENTAL HEALTH, PROMOTE INDIVIDUAL EMPOWERMENT, AND INCREASE PUBLIC ACCESS TO TREATMENT AND SERVICES FOR NEURODIVERGENT PEOPLE.</p>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 image">
+                                        <div class="img">
+                                            <img src="img/egg.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="pills-home-tab">
+                                <div class="row">
+                                    <div class="left col-lg-6">
+                                        <div class="why-us box-white">
+                                            <h5 class="title">Our vision</h5>
+                                            <!-- <h6 class="sub-title">We Are A Creative Agency</h6> -->
+                                            <p>OUR VISION IS TO IMPROVE THE LIVES OF NEURODIVERGENT PEOPLE BY CREATING A NETWORK WHERE PEOPLE HAVE WELLNESS TOOLS AS WE STRIVE TO IMPROVE OUR SOCIETIES’ QUALITY OF LIFE.</p>
+                                            <!-- <ul class="feat mt-30 row">
+                                                <li class="col-sm-4">
+                                                    <span class="icon icon-basic-display"></span>
+                                                    <h6>Perfect Design</h6>
+                                                </li>
+                                                <li class="col-sm-4">
+                                                    <span class="icon icon-basic-picture-multiple"></span>
+                                                    <h6>Retina Ready</h6>
+                                                </li>
+                                                <li class="col-sm-4">
+                                                    <span class="icon icon-basic-headset"></span>
+                                                    <h6>Friendly Support</h6>
+                                                </li>
+                                            </ul> -->
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 image">
+                                        <div class="img">
+                                            <img src="img/eg2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- End Hero ====
+        ======================================= -->
+
+
+        <!-- =====================================
+        ==== Start Process -->
+
+        <div class="process section-padding bg-img bg-fixed text-center" data-overlay-dark="7" data-background="img/bg6.jpg">
+            <div class="container">
+                <div class="row">
+
+                    <div class="section-head offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+                        <h4><span>Creative</span> Process</h4>
+                        <p>At Society 260, we are deeply committed to nurturing the creative potential of those in our community. Whether it’s through workshops, collaborative projects, or providing a platform to showcase their talents, we strive to support the growth and development of arts and crafts. By fostering a space where creativity thrives, we empower individuals to explore their passions, refine their skills, and share their unique artistry with the world.</p>
+                    </div>
+                    <div class="full-width clearfix"></div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item first mb-md50">
+                            <img src="img/arrow.png" class="tobotm" alt="">
+                            <span class="icon icon-basic-lightbulb"></span>
+                            <div class="cont">
+                                <h3>01</h3>
+                                <h6>Ideas</h6>
+                                <p>We provide a platforms to nurture and develop ideas into impactful realities.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item odd mb-md50">
+                            <img src="img/arrow.png" alt="">
+                            <span class="icon icon-basic-book-pencil"></span>
+                            <div class="cont">
+                                <h3>02</h3>
+                                <h6>Planning</h6>
+                                <p>Crafting personalized plans to structure, refine, and execute creative processes effectively.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item mb-sm50">
+                            <img src="img/arrow.png" class="tobotm" alt="">
+                            <span class="icon icon-basic-pencil-ruler"></span>
+                            <div class="cont">
+                                <h3>03</h3>
+                                <h6>Development</h6>
+                                <p>Offering workshops and collaborative opportunities to develope and refine art and craft</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="item odd">
+                            <span class="icon icon-basic-server-upload"></span>
+                            <div class="cont">
+                                <h3>04</h3>
+                                <h6>Execution</h6>
+                                <p>Providing a platform to test, refine, and launch art and ideas, turning creativity into impactful expressions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- End Process ====
+        ======================================= -->
+
+
+        <!-- =====================================
+        ==== Start Works -->
+
+
+         
+
+        <!-- End Works ====
+        ======================================= -->
+
+
+        <!-- =====================================
+        ==== Start Why-us -->
+
+        <!-- <div class="why-us section-padding bg-gray">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <div class="img mb-md50">
+                            <img src="img/f1.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="content pt-10">
+                            <div class="item mb-40">
+                                <span class="icon icon-basic-display"></span>
+                                <div class="cont">
+                                    <h5>Fully Responsive</h5>
+                                    <p>Nulla metus ullamcorper vel tincidunt sed euismod nibh Quisque volutpat velit class aptent taciti sociosqu.</p>
+                                </div>
+                            </div>
+                            <div class="item mb-40">
+                                <span class="icon icon-basic-bolt"></span>
+                                <div class="cont">
+                                    <h5>Clean & Modern Design</h5>
+                                    <p>Nulla metus ullamcorper vel tincidunt sed euismod nibh Quisque volutpat velit class aptent taciti sociosqu.</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span class="icon icon-basic-headset"></span>
+                                <div class="cont">
+                                    <h5>Friendly Support</h5>
+                                    <p>Nulla metus ullamcorper vel tincidunt sed euismod nibh Quisque volutpat velit class aptent taciti sociosqu.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
+
+        <!-- End Why-us ====
+        ======================================= -->
+
+
+        <!-- =====================================
+        ==== Start Teams -->
+
+        
+        
+
+        <!-- End Teams ====
+        ======================================= -->
+
+
+
+        <!-- =====================================
+        ==== Start Testimonials -->
+
+        <!-- <section class="testimonials section-padding bg-img bg-fixed" data-overlay-dark="7" data-background="img/bg4.jpg">
+            <div class="container">
+                <div class="row">
+
+                    <div class="section-head offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+                        <h4>What's <span>Clients</span> Says?</h4>
+                        <p>We are a passionate digital design agency that specializes in beautiful and easy-to-use digital design & web development services.</p>
+                    </div>
+
+                    <div class="owl-carousel owl-theme text-center col-lg-10 offset-lg-1">
+                        <div class="item-box">
+                            <span class="quote">
+                                <img src="img/quot.png" alt="">
+                            </span>
+                            <p>Lorem Ipsum is simply dummy text a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="info">
+                                <div class="author-img">
+                                    <img src="img/clients/1.jpg" alt="">
+                                </div>
+                                <div class="cont">
+                                    <h6>Alex Smith</h6>
+                                    <span>Envato Customer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-box">
+                            <span class="quote">
+                                <img src="img/quot.png" alt="">
+                            </span>
+                            <p>Lorem Ipsum is simply dummy text a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="info">
+                                <div class="author-img">
+                                    <img src="img/clients/2.jpg" alt="">
+                                </div>
+                                <div class="cont">
+                                    <h6>Alex Smith</h6>
+                                    <span>Envato Customer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-box">
+                            <span class="quote">
+                                <img src="img/quot.png" alt="">
+                            </span>
+                            <p>Lorem Ipsum is simply dummy text a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="info">
+                                <div class="author-img">
+                                    <img src="img/clients/3.jpg" alt="">
+                                </div>
+                                <div class="cont">
+                                    <h6>Alex Smith</h6>
+                                    <span>Envato Customer</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-box">
+                            <span class="quote">
+                                <img src="img/quot.png" alt="">
+                            </span>
+                            <p>Lorem Ipsum is simply dummy text a galley of type and scrambled it to make a type specimen book.</p>
+                            <div class="info">
+                                <div class="author-img">
+                                    <img src="img/clients/4.jpg" alt="">
+                                </div>
+                                <div class="cont">
+                                    <h6>Alex Smith</h6>
+                                    <span>Envato Customer</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section> -->
+
+        <!-- End Testimonials ====
+        ======================================= -->
+
+        
+        <!-- =====================================
+        ==== Start Price -->
+
+        <!-- <section class="price section-padding bg-gray" data-scroll-index="4">
+            <div class="container">
+                <div class="row">
+
+                    <div class="section-head offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+                        <h4>Pricing <span>Table</span></h4>
+                        <p>We are a passionate digital design agency that specializes in beautiful and easy-to-use digital design & web development services.</p>
+                    </div>
+
+                    <div class="pricing-tables text-center full-width">
+
+                        <div class="row">
+
+                            <div class="col-lg-3">
+                                <div class="item mb-md50">
+                                    <div class="type">
+                                        <h4>Free</h4>
+                                    </div>
+
+                                    <div class="value">
+                                        <h3><span>$</span>00</h3>
+                                        <span class="per">/ Month</span>
+                                    </div>
+
+                                    <div class="features">
+                                        <ul>
+                                            <li>10 GB Disk Space</li>
+                                            <li>15 Domain Names</li>
+                                            <li>4 Email Address</li>
+                                            <li>Enhanced Security</li>
+                                            <li>Unlimited Support</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="order">
+                                        <a href="#0" class="butn butn-bg">
+                                            <span>Purchase Now</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="item mb-md50">
+                                    <div class="type">
+                                        <h4>Basic</h4>
+                                    </div>
+
+                                    <div class="value">
+                                        <h3><span>$</span>10</h3>
+                                        <span class="per">/ Month</span>
+                                    </div>
+
+                                    <div class="features">
+                                        <ul>
+                                            <li>10 GB Disk Space</li>
+                                            <li>15 Domain Names</li>
+                                            <li>4 Email Address</li>
+                                            <li>Enhanced Security</li>
+                                            <li>Unlimited Support</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="order">
+                                        <a href="#0" class="butn butn-bg">
+                                            <span>Purchase Now</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="item active mb-md50">
+
+                                    <div class="type">
+                                        <h4>Standard</h4>
+                                    </div>
+
+                                    <div class="value">
+                                        <h3><span>$</span>30</h3>
+                                        <span class="per">/ Month</span>
+                                    </div>
+
+                                    <div class="features">
+                                        <ul>
+                                            <li>100 GB Disk Space</li>
+                                            <li>30 Domain Names</li>
+                                            <li>5 Email Address</li>
+                                            <li>Enhanced Security</li>
+                                            <li>Unlimited Support</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="order">
+                                        <a href="#0" class="butn butn-light">
+                                            <span>Purchase Now</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3">
+                                <div class="item">
+                                    <div class="type">
+                                        <h4>Premium</h4>
+                                    </div>
+
+                                    <div class="value">
+                                        <h3><span>$</span>80</h3>
+                                        <span class="per">/ Month</span>
+                                    </div>
+
+                                    <div class="features">
+                                        <ul>
+                                            <li>500 GB Disk Space</li>
+                                            <li>100 Domain Names</li>
+                                            <li>10 Email Address</li>
+                                            <li>Enhanced Security</li>
+                                            <li>Unlimited Support</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="order">
+                                        <a href="#0" class="butn butn-bg">
+                                            <span>Purchase Now</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section> -->
+
+        <!-- End Price ====
+        ======================================= -->
+
+
+        <!-- =====================================
+        ==== Start Blog -->
+
+        <section class="blog section-padding" data-scroll-index="5">
+            <div class="container">
+                <div class="row">
+
+                    <div class="section-head offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+                        <h4><span>Events</span> </h4>
+                        <p>Society 260 organizes impactful events focused on mental health awareness, support, and empowerment. These events include workshops, panel discussions, and wellness activities designed to foster open conversations and provide valuable resources for mental well-being.</p>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="item mb-md50">
+                            <div class="post-img">
+                                <div class="img">
+                                    <img src="img/blog/1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <div class="info">
+                                    <a href="#0">Date:</a>
+                                    <a href="#0">06 Aug 2025</a>
+                                    <a href="#0" class="tag">More</a>
+                                </div>
+                                <h6><a href="#0">Event Name</a></h6>
+                                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the dummy text ever</p>
+                                <a href="#0" class="more">Read More <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="item mb-md50">
+                            <div class="post-img">
+                                <div class="img">
+                                    <img src="img/blog/2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <div class="info">
+                                    <a href="#0">Date:</a>
+                                    <a href="#0">10 Aug 2025</a>
+                                    <a href="#0" class="tag">More</a>
+                                </div>
+                                <h6><a href="#0">Event Name</a></h6>
+                                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the dummy text ever</p>
+                                <a href="#0" class="more">Read More <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="item">
+                            <div class="post-img">
+                                <div class="img">
+                                    <img src="img/blog/3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="cont">
+                                <div class="info">
+                                    <a href="#0">Date:</a>
+                                    <a href="#0">06 Oct 2025</a>
+                                    <a href="#0" class="tag">More</a>
+                                </div>
+                                <h6><a href="#0">Event Name</a></h6>
+                                <p>Lorem Ipsum is simply dummy text of the printing and type setting industry. Lorem Ipsum has been the dummy text ever</p>
+                                <a href="#0" class="more">Read More <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- End Blog ====
+        ======================================= -->
+
+
+        <!-- =====================================
+        ==== Start Call-Action -->
+
+        <section class="call-action section-padding bg-img bg-fixed" data-overlay-dark="5" data-background="img/bg2.jpg">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <h2>Want to work with us?</h2>
+                            <h5>Tell us about your project</h5>
+                            <a href="#0" class="butn butn-bg">
+                                <span>Get Started</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- End Call-Action ====
+        ======================================= -->
+
+
+        <!-- =====================================
+        ==== Start Contact -->
+
+       <section class="contact section-padding" data-scroll-index="6">
+           <div class="container">
+               <div class="row">
+
+                    <div class="section-head offset-md-2 col-md-8 offset-lg-3 col-lg-6">
+                        <h4>Get <span>In</span> Touch</h4>
+                        <p></p>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="contact-info mb-md50">
+                            <h5>Contact Us :</h5>
+                            <p></p>
+                            <div class="item">
+                                <span class="icon icon-basic-tablet"></span>
+                                <div class="cont">
+                                    <h6>Phone : </h6>
+                                    <p>+255 683 459 691</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span class="icon icon-basic-mail-open-text"></span>
+                                <div class="cont">
+                                    <h6>Email : </h6>
+                                    <p>info@society260.com</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span class="icon icon-basic-geolocalize-05"></span>
+                                <div class="cont">
+                                    <h6>Address : </h6>
+                                    <p>Lusaka Zambia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-7">
+                        <form class="form" id="contact-form" method="post" action="http://innovationplans.com/idesign/coco3/contact.php">
+
+                            <div class="messages"></div>
+
+                            <div class="controls">
+
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input id="form_name" type="text" name="name" placeholder="Name" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input id="form_email" type="email" name="email" placeholder="Email" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input id="form_subject" type="text" name="subject" placeholder="Subject">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea id="form_message" name="message" placeholder="Message" rows="4" required="required"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <button type="submit" class="butn butn-bg"><span>Send Message</span></button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+               </div>
+           </div>
+       </section>
+
+        <!-- End Contact ====
+        ======================================= -->
+
+
+        <!-- =====================================
+        ==== Start Footer -->
+
+        <footer class="text-center">
+            <div class="container">
+                <!-- Logo -->
+                <a class="logo" href="#">
+                    <img src="img/logo-light.png" alt="logo">
+                </a>
+
+                <div class="social">
+                    <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#0"><i class="fab fa-twitter"></i></a>
+                    <a href="#0"><i class="fab fa-linkedin-in"></i></a>
+
+                    <a href="#0"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+
+                <p><a target="_blank" href="https://kondwanisakala.netlify.app">Kondwani Tech</a></p>
+            </div>
+
+        </footer>
+
+        <!-- End Footer ====
+        ======================================= -->
+
+
+
+        <script>
+            // JavaScript to handle FAQ answer visibility toggle
+          document.querySelectorAll('.faq-question').forEach(question => {
+              question.addEventListener('click', function () {
+                  const faqItem = this.closest('.faq-item');
+                  faqItem.classList.toggle('active'); // Toggle 'active' class to show/hide answer
+              });
+          });
+
+        </script>
+        <script src="app.js"></script>
+        <!-- jQuery -->
+        <script src="js/jquery-3.0.0.min.js"></script>
+        <script src="js/jquery-migrate-3.0.0.min.js"></script>
+
+        <!-- popper.min -->
+        <script src="js/popper.min.js"></script>
+
+        <!-- bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!-- scrollIt -->
+        <script src="js/scrollIt.min.js"></script>
+
+        <!-- jquery.waypoints.min -->
+        <script src="js/jquery.waypoints.min.js"></script>
+
+        <!-- owl carousel -->
+
+
+        <!-- jquery.magnific-popup js -->
+        <script src="js/jquery.magnific-popup.min.js"></script>
+
+        <!-- stellar js -->
+        <script src="js/jquery.stellar.min.js"></script>
+
+        <!-- isotope.pkgd.min js -->
+        <script src="js/isotope.pkgd.min.js"></script>
+
+        <!-- YouTubePopUp.jquery -->
+        <script src="js/YouTubePopUp.jquery.js"></script>
+
+        <!-- validator js -->
+        <script src="js/validator.js"></script>
+
+        <!-- custom scripts -->
+        <script src="js/scripts.js"></script>
+
+
+    </body>
+
+</html>
